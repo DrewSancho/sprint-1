@@ -1,0 +1,122 @@
+@import "components/vars";
+@import "components/mixins";
+
+
+.body {
+    margin: 0 auto;
+    position: relative;
+}
+
+.subheader {
+    margin: 0 auto;
+    background-color: white;
+    @include column (1, 1);
+    font-family: 'Slabo 27px', serif;
+    text-align: center;
+    height: 75px;
+}
+
+.left, .right {
+    @include column (1, 2);
+    font-family: 'slabo 27px', serif;
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    border: 0 2px solid #c2c2c2;
+    text-align: center;
+    background-color: $offwhite;
+    height: 75px;
+    line-height: 75px;
+    cursor: pointer;
+    box-shadow: 2px 2px #ccc;
+    @include m {
+        @include column (1, 2);
+    }
+}
+
+.list {
+    display: none;
+    font-size: 24px;
+    color: black;
+    overflow: hidden;
+    font-family: 'Slabo 27px', serif;
+    list-style-type: none;
+    float: left;
+    height: 100%;
+    @include column (1, 1);
+    @include m {
+        @include column (1, 2);
+        display: block;
+    }
+    @include l {
+        @include column (1, 2);
+    }
+}
+
+.list-container {
+    border-right: 3px solid $olive; 
+}
+
+.list-container:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.list-items {
+    border-right: 3px solid $olive;
+}
+
+.is-active {
+    display: block;
+}
+
+.add {
+    background-color: $offwhite;
+    border-radius: 50%;
+    border-color: $olive;
+    position: absolute;
+    font-size: 24px;
+    padding: 10px;
+    font-family: 'slabo 27px', serif;
+    left: 80%;
+    margin-top: 15px;
+    transition: ease-out 250ms;
+    
+    @include m {
+        visibility: hidden;
+    }
+}
+
+.start {
+    background-color: green;
+    font-size: 50px;
+    font-family: 'Galindo', cursive;
+    color: $offwhite;
+    border-color: $olive;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    @include column (1, 2);
+}
+
+.stop {
+    background-color: red;
+    color: $offwhite;
+    font-size: 50px;
+    margin-top: 80px;
+    font-family: 'Galindo', cursive;
+    border-color: $olive;
+    position: fixed;
+    bottom:0;
+    right:0;
+    @include column (1, 2);
+}
+
+.chk {
+    font-size: 16px;
+    text-align: right;
+    float: right;
+}
+
+@import "components/form"

@@ -1,0 +1,23 @@
+@import "vars";
+
+@mixin c () {
+    @media (min-width: $c) {
+        @content;
+    }
+}
+
+@mixin m () {
+    @media (min-width: $m) {
+        @content;
+    }
+}
+
+@mixin l () {
+    @media (min-width: $l) {
+        @content;
+    }
+}
+
+@mixin column ($w, $rw) {
+    width: ($w / $rw) * 100%;
+}

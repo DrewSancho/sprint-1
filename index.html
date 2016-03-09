@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Galindo' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="build/main.css">
+</head>
+<body>
+    <div class="header">Cart Hopper</div>
+    <div class="body">
+        <div class="subheader">
+            <div class="left listHeader" data-list="list-items">My List</div>
+            <div class="right listHeader" data-list="in-cart-list">Picked Up</div>
+        </div>
+         <div class="list-container">
+            <ul class="list-items list is-active"></ul>
+            <ul class="in-cart-list list"></ul>
+        </div>
+    </div>
+    <div class="add-to-cart">
+        <div class="form">    
+            <input placeholder="Item Name" class="name"></input>
+        </div>
+        <div>        
+            <input placeholder="Quantity" class="qty"></input>
+        </div>
+        <button class="cancel">Cancel</button>
+        <button class="submit">Submit</button>
+    </div>
+    <div class="bottom">
+        <div class="add-cart">
+            <button class="add">+</button>
+        </div>
+        <button class="start">Start</button>
+        <button class="stop">Stop</button>
+    </div>
+    <script src="src/js/main.js" type="text/javascript"></script>
+</body>
+</html>

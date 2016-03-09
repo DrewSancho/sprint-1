@@ -1,0 +1,45 @@
+@import "components/vars";
+@import "components/mixins";
+
+.add-to-cart {  
+    position: absolute;
+    height: 170px;
+    opacity: .75;
+    width: auto;
+    background-color: $offwhite;
+    bottom: 200%;
+    padding: 10px;
+    margin: 5px;
+    @include l {
+        @include column (1, 1);
+        margin: 0 auto;
+        position: static;
+        opacity: 1;
+        height: 150px;
+        text-align: center;
+        display: block;
+    }
+}
+
+.add-to-cart.is-active {
+    transform: translateY(170px);
+}
+
+.is-invalid:after {
+    content: attr(data-msg);
+    color: #f80322;
+    text-shadow: 1px 1px black;
+}
+
+.qty, .name {
+    margin: 5px;
+    @include column (1, 4);
+    float: left;
+}
+
+.cancel, .submit {
+    margin: 5px;
+    @include column (1, 8);
+    display: inline-block;
+    box-shadow: 2px 2px #ccc;
+}

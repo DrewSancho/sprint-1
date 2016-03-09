@@ -1,0 +1,13 @@
+@import "components/vars";
+
+.header {
+    background-color: $orangish;
+    color: $offwhite;
+    text-align: center;
+    height: 85px;
+    width: 100%;
+    font-size: 30px;
+    line-height: 85px;
+    font-family: 'Galindo', cursive;
+    margin-bottom: 40px;
+}
